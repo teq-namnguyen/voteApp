@@ -6,8 +6,8 @@ jobs:
     services:
       postgres:
         image: postgres
-        end:
-          POSTGRES_PASSWORD: postgres
+        env:
+          PO`STGRES_PASSWORD: postgres
           options: >-
             --health-cmd pg_isready
             --health-interval 10s
