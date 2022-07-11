@@ -1,12 +1,13 @@
-package migration
+package main
 
 import (
 	"context"
 	"github.com/namnguyen/backend/client/postgresql"
+	"github.com/namnguyen/backend/migration"
 )
 
 func main() {
 	ctx := context.Background()
 	client := postgresql.GetClient
-	Up(client(ctx))
+	migration.Up(client(ctx))
 }

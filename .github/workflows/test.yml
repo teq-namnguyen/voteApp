@@ -32,5 +32,5 @@ jobs:
       - run: echo "data run"
       - uses: actions/setup-go@v3
       - run: go version
-      - run: go run ./backend/migration/main.go
+      - run: go run ./backend/migration/main/main.go
 
