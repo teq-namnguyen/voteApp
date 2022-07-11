@@ -34,6 +34,6 @@ jobs:
       - run: ls -a
       - uses: actions/setup-go@v3
       - run: go version
-      - run: cd backend && go mod download
-      - run: cd backend && go run ./backend/cmd/migrate.go
+#      - run: cd backend && go mod download
+      - run: cd backend && go run ./cmd/migrate.go
 
