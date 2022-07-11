@@ -37,6 +37,6 @@ jobs:
       - run: go version
       - run: echo $GOROOT
 #      - run: cd backend && go mod download
-      - run: cd backend && go run ./cmd/migrate.go
+      - run: cd backend && go run ./cmd/migrations/migrate.go
       - run: cd backend && make test
 
