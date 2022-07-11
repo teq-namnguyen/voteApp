@@ -29,6 +29,9 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+      - run: sudo -u postgres psql
+      - run: create database login_db;
+      - run: \q
       - run: echo $GITHUB_WORKSPACE
       - run: cd $GITHUB_WORKSPACE
       - run: ls -a
