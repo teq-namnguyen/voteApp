@@ -1,4 +1,4 @@
-DB_PORT := 3320
+DB_PORT := 5432
 
 run:
 	air -c .air.conf
@@ -33,7 +33,7 @@ some_file: other_file
 	echo "This will run second, because it depends on other_file"
 	touch some_file
 test: go/vendor
-	@FAKE_DB_HOST=localhost:$(DB_PORT) FAKE_DB_USERNAME=root FAKE_DB_PASSWORD=root FAKE_DB_DATABASE=pang_test go test -p 1 -cover $(shell go list ./... |grep -v 'vendor') -coverprofile=coverage.out
+	@FAKE_DB_HOST=localhost FAKE_DB_USERNAME=postgres FAKE_DB_PASSWORD=password FAKE_DB_DATABASE=login_db go test -p 1 -cover $(shell go list ./... |grep -v 'vendor') -coverprofile=coverage.out
 
 
 
