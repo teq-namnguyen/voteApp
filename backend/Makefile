@@ -32,7 +32,7 @@ other_file:
 some_file: other_file
 	echo "This will run second, because it depends on other_file"
 	touch some_file
-test: go/vendor
+test:
 	@FAKE_DB_HOST=localhost FAKE_DB_USERNAME=postgres FAKE_DB_PASSWORD=password FAKE_DB_DATABASE=login_db go test -p 1 -cover $(shell go list ./... |grep -v 'vendor') -coverprofile=coverage.out
 
 
