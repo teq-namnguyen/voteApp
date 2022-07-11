@@ -1,5 +1,16 @@
+
+
 name: GitHub Actions Demo
 on: [push]
+env:
+  DB_HOST: localhost
+  DB_PORT: 5432
+  DB_NAME: login_db
+  DB_USER: postgres
+  DB_PASS: password
+  DB_MAX_IDLE_CONNS: 10
+  DB_MAX_OPEN_CONNS: 40
+  DB_TX_RETRY_COUNT: 1
 jobs:
   container-job:
     runs-on: ubuntu-latest
@@ -9,7 +20,7 @@ jobs:
         ports:
           - 5432:5432
         env:
-          PO`STGRES_PASSWORD: postgres
+          POSTGRES_PASSWORD: password
           options: >-
             --health-cmd pg_isready
             --health-interval 10s
@@ -19,6 +30,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: echo "data run"
-      - name: Connect to PostgreSQL
-        run: postgresql
+      - uses: actions/setup-go@v3
+      - run: go version
+      - run: go run ./backend/migration/main.go
 
