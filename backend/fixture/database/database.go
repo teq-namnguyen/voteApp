@@ -25,11 +25,11 @@ type Database struct {
 func InitDatabase() *Database {
 	connectionString := fmt.Sprintf(
 		"host=%s user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=Asia/Shanghai",
-		os.Getenv("DB_TEST_HOST"),
-		os.Getenv("DB_TEST_USER"),
-		os.Getenv("DB_TEST_PASS"),
-		os.Getenv("DB_TEST_DBNAME"),
-		os.Getenv("DB_TEST_PORT"),
+		os.Getenv("DB_HOST"),
+		os.Getenv("DB_USER"),
+		os.Getenv("DB_PASS"),
+		os.Getenv("DB_NAME"),
+		os.Getenv("DB_PORT"),
 	)
 	db, err := gorm.Open(postgres.New(postgres.Config{DSN: connectionString}), &gorm.Config{})
 	if err != nil {

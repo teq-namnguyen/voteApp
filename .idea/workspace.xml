@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83be0932-f9a0-4cff-8e89-e7899c64697c" name="Changes" comment="push code">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.yml" afterDir="false" />
+    <list default="true" id="83be0932-f9a0-4cff-8e89-e7899c64697c" name="Changes" comment="push code 123">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/migration/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/migration/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fixture/database/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixture/database/database.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +80,11 @@
       <recent name="$PROJECT_DIR$/backend/usecase/user" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/backend/cmd/migrations" />
+      <recent name="$PROJECT_DIR$/backend/cmd" />
+      <recent name="$PROJECT_DIR$/backend/migration/main" />
       <recent name="$PROJECT_DIR$/backend" />
-      <recent name="$PROJECT_DIR$/backend/usecase/auth" />
-      <recent name="$PROJECT_DIR$/backend/delivery/http/auth" />
-      <recent name="$PROJECT_DIR$/backend/delivery/http" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Makefile Target.some_file">
@@ -164,7 +163,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="push code" />
-    <option name="LAST_COMMIT_MESSAGE" value="push code" />
+    <MESSAGE value="push code 1" />
+    <MESSAGE value="push code 12" />
+    <MESSAGE value="push code 122" />
+    <MESSAGE value="push code 123" />
+    <option name="LAST_COMMIT_MESSAGE" value="push code 123" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
