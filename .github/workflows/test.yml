@@ -29,8 +29,8 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - run: echo $GITHUB_WORKSPACE/backend
-      - run: cd $GITHUB_WORKSPACE
+      - run: echo $GITHUB_WORKSPACE
+      - run: cd $GITHUB_WORKSPACE/backend
       - run: ls -a
       - uses: actions/setup-go@v3
       - run: go version
