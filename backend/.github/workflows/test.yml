@@ -1,0 +1,21 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  container-job:
+    runs-on: ubuntu-lastest
+    services:
+      postgres:
+        image: postgres
+        end:
+          POSTGRES_PASSWORD: postgres
+          options: >-
+            --health-cmd pg_isready
+            --health-interval 10s
+            --health-timeout 5s
+            --health-retries 5
+    steps:
+      - name: Check out repository code
+        use: actions/checkout@v3
+      - name: Connect to PostgreSQL
+        run: postgresql
+
